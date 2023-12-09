@@ -124,7 +124,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                     $username = 'mohit-ram-gupta';
                     $accessToken = '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';
-                    $repository = "https://$username:$accessToken@github.com/mohit-ram-gupta/repo1.git/";
+                    $repository = "https://$username:$accessToken@github.com/mohit-ram-gupta/repo2.git/";
 
                     $gitPath = '"C:/Program Files/Git/bin/git.exe"';
                     $localRepositoryPath = 'C:/wamp64/www/gitCode';
