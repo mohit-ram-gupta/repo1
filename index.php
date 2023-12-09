@@ -1,109 +1,4 @@
 <?php
-// $repository = 'https://github.com/mohit-ram-gupta/Being-api';
-// $branch = 'master';
-// $gitPath = '"C:/Program Files/Git/bin/git.exe"';
-
-
-// $localRepositoryPath = 'C:\wamp64\www\gitCode';
-
-// $gitPushCommand = "$gitPath push origin $branch 2>&1";
-
-// $output = exec($gitPushCommand);
-
-// echo "<pre>$output</pre>";
-
-
-// $commandCheckout = "$gitPath checkout txt";
-// $outputCheckout = shell_exec($commandCheckout);
-
-// if ($outputCreateBranch === null || $outputCheckout === null) {
-//     echo "Error executing the git branch or checkout command.";
-// } else {
-//     echo "<pre>Create branch command: $outputCreateBranch</pre>";
-//     echo "<pre>Checkout command: $outputCheckout</pre>";
-// }
-
-
-// $command2= "$gitPath status";
-// $output2 = shell_exec($command2);
-
-// if ($command2 === null) {
-//     echo "Error executing the git init command.";
-// } else {
-//     echo "<pre>Init status : $output2</pre>";
-
-// }
-
-
-// $command3= "$gitPath add . ";
-// $output3 = shell_exec($command3);
-
-// if ($command3 === null) {
-//     echo "Error executing the git init command.";
-// } else {
-//     echo "<pre>Init add : $output3</pre>";
-
-// }
-
-// $command4= "$gitPath status";
-// $output4 = shell_exec($command4);
-
-// if ($command4 === null) {
-//     echo "Error executing the git init command.";
-// } else {
-//     echo "<pre>Init after add status  : $output4</pre>";
-
-// }
-
-// $command5= "$gitPath commit -m 'just3' ";
-// $output5 = shell_exec($command5);
-
-// if ($command5 === null) {
-//     echo "Error executing the git init command.";
-// } else {
-//     echo "<pre>Init commit : $output5</pre>";
-
-// }
-
-// $command6= "$gitPath remote add origin $repositoryUrl ";
-// $output6 = shell_exec($command6);
-
-// if ($command6 === null) {
-//     echo "Error executing the git init command.";
-// } else {
-//     echo "<pre>Init remote add : $output6</pre>";
-
-// }
-
-// // $command7= "$gitPath pull  origin master ";
-// // $output7 = shell_exec($command7  . ' 2>&1');
-
-// // if ($output7 === null) {
-// //     echo "Error executing the git pull command.";
-// // } else {
-// //     echo "<pre>Init pull: $output7</pre>";
-// // }
-
-
-// $command8 = "$gitPath clone $repositoryUrl";
-// $output8 = shell_exec($command8 . ' 2>&1'); // Added space before '2>&1'
-
-// if ($output8 === null) {
-//     echo "Error executing the git clone command.";
-// } else {
-//     echo "<pre>Clone output: $output8</pre>";
-// }
-
-// // $command9 = "$gitPath push -u origin master";
-
-// // $output9 = shell_exec("$command9 2>&1");
-
-// // if ($output9 === null) {
-// //     echo "Error executing the git push command.";
-// // } else {
-// //     echo "<pre>Init pull: $output9</pre>";
-// // }
-
 
 $gitPath = '"C:/Program Files/Git/bin/git.exe"';
 $repositoryUrl = 'https://github.com/mohit-ram-gupta/testingrepo';
@@ -153,7 +48,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 break;
 
 
-        case 'clone':
+                case 'clone':
 
                 $command8 = "$gitPath clone $repositoryUrl";
                 $output8 = shell_exec($command8 . ' 2>&1'); 
@@ -229,7 +124,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                     $username = 'mohit-ram-gupta';
                     $accessToken = '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';
-                    $repository = "https://$username:$accessToken@github.com/mohit-ram-gupta/repo1.git";
+                    $repository = "https://$username:$accessToken@github.com/mohit-ram-gupta/repo1.git/";
 
                     $gitPath = '"C:/Program Files/Git/bin/git.exe"';
                     $localRepositoryPath = 'C:/wamp64/www/gitCode';
@@ -248,11 +143,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     }
 
                     break;
-
-
-
-        default:
-            break;
+                 default:
+                 break;
     }
 }
 ?>
@@ -329,16 +221,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </div>
   </div>
 </div>
-
-
-
-
-
-
-
-
-
-
 
 <div class="container">
   <!-- Modal -->
