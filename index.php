@@ -235,7 +235,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     $localRepositoryPath = 'C:/wamp64/www/gitCode';
                     $branch = 'master';
 
-                    // shell_exec("$gitPath -C \"$localRepositoryPath\" remote set-url push1 $repository");
+                     shell_exec("$gitPath -C \"$localRepositoryPath\" remote set-url push1 $repository");
 
                     $gitPushCommand = "$gitPath -C \"$localRepositoryPath\" push push1 master 2>&1";
 
