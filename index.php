@@ -214,7 +214,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     break;
 
                     case 'commit' :
-                    $command5= "$gitPath commit -m 'just3' ";
+                    $command5= "$gitPath commit -m 'just5' ";
                     $output5 = shell_exec($command5);
 
                     if ($command5 === null) {
@@ -229,13 +229,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                     $username = 'mohit-ram-gupta';
                     $accessToken = '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';
-                    $repository = "https://$username:$accessToken@github.com/mohit-ram-gupta/testingrepo.git";
+                    $repository = "https://$username:$accessToken@github.com/mohit-ram-gupta/repo1.git";
 
                     $gitPath = '"C:/Program Files/Git/bin/git.exe"';
                     $localRepositoryPath = 'C:/wamp64/www/gitCode';
                     $branch = 'master';
 
-                    shell_exec("$gitPath -C \"$localRepositoryPath\" remote set-url push1 $repository");
+                    // shell_exec("$gitPath -C \"$localRepositoryPath\" remote set-url push1 $repository");
 
                     $gitPushCommand = "$gitPath -C \"$localRepositoryPath\" push push1 master 2>&1";
 
@@ -278,7 +278,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
       <button type="submit" class="btn btn-danger" name="command" value="commit">Git Commit</button>
 
-      <button type="submit" class="btn btn-danger" name="command" value="push">Git Push</button>
+      <button type="submit" class="btn btn-warning" name="command" value="push">Git Push</button>
 
       <button type="submit" class="btn btn-danger" name="command" value="pull">Git Pull</button>
 
